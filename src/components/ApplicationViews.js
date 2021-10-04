@@ -10,6 +10,7 @@ import { EmployeeList } from "./employee/EmployeeList";
 import { LocationList } from "./locations/LocationList";
 import { AnimalDetail } from "./animals/AnimalDetail";
 import { AnimalForm } from './animals/AnimalForm'
+import { CustomerDetail } from "./customer/CustomerDetail";
 
 
 export const ApplicationViews = () => {
@@ -19,23 +20,26 @@ export const ApplicationViews = () => {
       <Route exact path="/">
         <Home />
       </Route>
-
       {/* Render the animal list when http://localhost:3000/animals */}
       <Route exact path="/animals">
         <AnimalList />
       </Route>
-      
       <Route path="/animals/:animalId(\d+)">
-  <AnimalDetail />
-</Route>
-
-// Our shiny new route.
-<Route path="/animals/create">
-  <AnimalForm />
-</Route>
-
-
-{/*
+        <AnimalDetail />
+      </Route>
+      
+      <Route exact path="/customer">
+        <CustomerList />
+      </Route>
+      <Route path="/customer/:customerId(\d+)">
+        <CustomerDetail />
+      </Route>
+      
+      // Our shiny new route.
+      <Route path="/animals/create">
+        <AnimalForm />
+      </Route>
+      {/*
   This is a new route to handle a URL with the following pattern:
   http://localhost:3000/animals/1
 
