@@ -17,7 +17,9 @@ export const AnimalDetail = () => {
       .then(animal => {
         setAnimal({
           name: animal.name,
-          breed: animal.breed
+          breed: animal.breed,
+          location: animal.location,
+          customer: animal.customer,
         });
         setIsLoading(false);
       });
