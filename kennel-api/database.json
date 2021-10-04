@@ -1,0 +1,74 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "locationId": 1,
+      "customerId": 1
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Shepherd",
+      "locationId": 2,
+      "customerId": 2
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct"
+    },
+    {
+      "id": 2,
+      "name": "Lil Mayo",
+      "address": "51 Area St"
+    },
+    {
+      "id": 3,
+      "name": "Chad Chadderson",
+      "address": "702 Murfreesboro Dr"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Hambino",
+      "jobTitle": "Manager"
+    },
+    {
+      "id": 2,
+      "name": "Godbody",
+      "jobTitle": "Clerk"
+    },
+    {
+      "id": 3,
+      "name": "Jeff",
+      "jobTitle": "Attendant"
+    },
+    {
+      "id": 4,
+      "name": "Tracy",
+      "jobTitle": "Cashier"
+    },
+    {
+      "id": 5,
+      "name": "Jama",
+      "jobTitle": "Owner"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    }
+  ]
+}
