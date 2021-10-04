@@ -2,17 +2,31 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle",
-      "locationId": 1,
-      "customerId": 1
+      "name": "Test",
+      "breed": "dude",
+      "customerId": "",
+      "locationId": ""
     },
     {
       "id": 2,
-      "name": "Decker",
-      "breed": "German Shepherd",
-      "locationId": 2,
-      "customerId": 2
+      "name": "5",
+      "breed": "isdgoa",
+      "customerId": 2,
+      "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Bruh",
+      "breed": "Person",
+      "customerId": 1,
+      "locationId": 1
+    },
+    {
+      "id": 4,
+      "name": "44",
+      "breed": "dude",
+      "customerId": 3,
+      "locationId": 1
     }
   ],
   "customers": [

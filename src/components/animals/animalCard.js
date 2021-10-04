@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import "./animal.css";
+import { useHistory } from "react-router-dom";
 
 export const AnimalCard = ({ animal, handleDeleteAnimal }) => {
+
+  const history = useHistory();
+
   return (
     <div className="card">
       <div className="card-content">
@@ -16,6 +20,12 @@ export const AnimalCard = ({ animal, handleDeleteAnimal }) => {
         <Link to={`/animals/${animal.id}`}>
           <button>Details</button>
         </Link>
+
+        <button type="button"
+  onClick={() => history.push(`/animals/${animal.id}/edit`)}>
+  Edit
+</button>
+
       </div>
     </div>
   );
