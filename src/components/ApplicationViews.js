@@ -1,5 +1,5 @@
-import React from "react";
-import { Route } from "react-router-dom";
+import {React, useState} from "react";
+import { Route, Redirect } from "react-router-dom";
 import { Home } from "./Home";
 import { CustomerCard } from "./customer/customerCard";
 import { EmployeeCard } from "./employee/employeeCard";
@@ -12,15 +12,43 @@ import { AnimalDetail } from "./animals/AnimalDetail";
 import { AnimalForm } from './animals/AnimalForm'
 import { CustomerDetail } from "./customer/CustomerDetail";
 import { AnimalEditForm } from "./animals/AnimalEditForm";
+import { Login } from "./auth/Login"
+import { Register } from "./auth/Register"
+
 
 
 export const ApplicationViews = () => {
+
+  const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
+
+  const setAuthUser = (user) => {
+    sessionStorage.setItem("kennel_customer", JSON.stringify(user))
+    setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+  }
+  
+
+
   return (
     <>
       {/* Render the location list when http://localhost:3000/ */}
       <Route exact path="/">
         <Home />
       </Route>
+<Route exact path="/animals">
+	{isAuthenticated ? <AnimalList /> : <Redirect to="/login" />}
+</Route>
+
+<Route path="/login">
+	<Login setAuthUser={setAuthUser}/>
+</Route>
+
+<Route path="/register">
+	<Register setAuthUser={setAuthUser}/>
+</Route>
+
+
+
+      
       {/* Render the animal list when http://localhost:3000/animals */}
       <Route exact path="/animals">
         <AnimalList />
