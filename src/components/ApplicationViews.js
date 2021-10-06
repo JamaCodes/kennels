@@ -17,14 +17,10 @@ import { Register } from "./auth/Register"
 
 
 
-export const ApplicationViews = () => {
+export const ApplicationViews = ({setAuthUser, isAuthenticated}) => {
 
-  const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
+  
 
-  const setAuthUser = (user) => {
-    sessionStorage.setItem("kennel_customer", JSON.stringify(user))
-    setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
-  }
   
 
 
@@ -50,16 +46,17 @@ export const ApplicationViews = () => {
 
       
       {/* Render the animal list when http://localhost:3000/animals */}
-      <Route exact path="/animals">
-        <AnimalList />
-      </Route>
       <Route path="/animals/:animalId(\d+)">
         <AnimalDetail />
       </Route>
 
       <Route path="/animals/:animalId(\d+)/edit"> 
-       <AnimalEditForm />
+       <AnimalEditForm /> 
 </Route>
+
+      <Route exact path="/locations">
+        <LocationList />
+      </Route>
 
       
       <Route exact path="/customer">
