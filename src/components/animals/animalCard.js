@@ -14,7 +14,7 @@ export const AnimalCard = ({ animal, handleDeleteAnimal }) => {
           Name: <span className="card-petname">{animal.name}</span>
         </h3>
         <p>Breed: {animal.breed}</p>
-        <button type="button" onClick={() => handleDeleteAnimal(animal.id)}>
+        <button className="button-56" type="button" onClick={() => handleDeleteAnimal(animal.id)}>
           Discharge
         </button>
         <Link to={`/animals/${animal.id}`}>
@@ -34,3 +34,4 @@ export const AnimalCard = ({ animal, handleDeleteAnimal }) => {
 //   <picture>
 //   <img src={require('./dog.svg')} alt="My Dog" />
 // </picture>
+

@@ -30,22 +30,22 @@ export const AnimalList = () => {
     getAnimals();
   }, []);
 
-  return (
-    <div className="container-cards">
-      //add this button above your display of animal cards
+  return (<div className="container-cards">
+  //add this button above your display of animal cards
 <section className="section-content">
 <button class="button-74" role="button" onClick={() => {history.push("/animals/create")}}> 
 <span class="text"> 
-      Admit Animal</span>
-  </button>
+  Admit Animal</span>
+</button>
 </section>
 
-      {animals.map(animal =>
-        <AnimalCard
-          key={animal.id}
-          animal={animal}
-          handleDeleteAnimal={handleDeleteAnimal} />)}
-    </div>
+  {animals.map(animal =>
+    <AnimalCard
+      key={animal.id}
+      animal={animal}
+      handleDeleteAnimal={handleDeleteAnimal} />)}
+</div>
+    
   );
 };
 
